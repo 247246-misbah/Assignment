@@ -3,9 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Certo - Mobile Privacy</title>
+    <!-- Requirement: Bootstrap 5 via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Requirement: Custom CSS in assets/css/style.css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Optional: Inter font for precision -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
+    <!-- Requirement: Semantic tags (HEADER/NAV) -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light certo-navbar py-2">
+            <div class="container-fluid px-lg-5">
+                <a class="navbar-brand me-0" href="#">
+                    <!-- Requirement: assets/images/ folder -->
+                    <img src="assets/images/logo.svg.png" alt="Certo Logo" height="28" class="d-inline-block align-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center fw-semibold">
+                        <li class="nav-item"><a class="nav-link px-3 ms-lg-2" href="#">iPhone</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Android</a></li>
+                        <li class="nav-item"><a class="nav-link px-3" href="#">Help</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle px-3 me-3" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown">
+                                Company
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-primary rounded-pill px-4 btn-signin fw-semibold" href="#">Sign in</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION START -->
+        <section class="hero-section overflow-hidden">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <!-- Left Side: Content -->
+                    <div class="col-lg-6 d-flex align-items-center justify-content-end hero-left py-5">
+                        <div class="hero-content-wrapper pe-lg-5 ps-4 py-3">
+                            <h1 class="hero-title fw-bold mb-4">Your mobile privacy <br> is our mission</h1>
+                            <p class="hero-lead mb-5">
+                                Think your phone has been hacked? Our trusted apps make it easy for you to scan, detect and remove threats from your iPhone and Android devices.
+                            </p>
+                            <div class="hero-buttons-flex">
+                                <a href="#" class="btn btn-warning rounded-pill px-4 py-3 fw-bold d-flex align-items-center">
+                                    Get Certo for iPhone <span class="ms-2 arrow-icon">→</span>
+                                </a>
+                                <a href="#" class="btn btn-outline-dark rounded-pill px-4 py-3 fw-bold">
+                                    Get Certo for Android
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Side: Background Image and Phone Mockup -->
+                    <div class="col-lg-6 hero-right position-relative">
+                        <div class="mockup-container">
+                            <!-- Updated to div1.png per your request -->
+                            <img src="assets/images/phone.png" alt="Phone Dashboard" class="img-fluid phone-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- HERO SECTION END -->
+
+        <!-- TESTIMONIALS & SOCIAL PROOF START -->
+        <section class="testimonials-section">
+            <div class="container">
+                <h2 class="testimonial-heading">Loved by thousands of iPhone and Android users alike</h2>
+
+                <div class="testimonial-row">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">Does exactly what it says. Clear to read and understand. This is now the second iPhone we've used it on and would certainly recommend this app.</p>
+                        <p class="testimonial-author">colinandmandy94</p>
+                    </div>
+                    
+                    <!-- Card 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">Love the ease and efficiency. Awesome app. Very informative and insightful if wanting to know more about your device. The added breach check is a great bonus.</p>
+                        <p class="testimonial-author">Jennifer Black</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">This app is good if you need to identify certain vulnerabilities on your iPhone. If you have any issues, their customer service was quite helpful and responsive.</p>
+                        <p class="testimonial-author">Phillip Colligan</p>
+                    </div>
+                </div>
+
+                <!-- Featured Logos Bar -->
+                <div class="featured-row">
+                
+                    <div class="featured-logos">
+                        <!-- Use your specific logo image files here -->
+                        <img src="assets/images/logos.png" alt="CNBC">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TESTIMONIALS & SOCIAL PROOF END -->
+    </main>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
