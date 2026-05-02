@@ -1,0 +1,221 @@
+/* Custom CSS Variables - Requirement */
+:root {
+    --primary-blue: #4353ff;
+    --primary-yellow: #ffc247;
+    --navy-text: #02033b;
+    --bg-light-blue: #f3f7ff;
+    --text-muted: #4a4d6d;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--navy-text);
+    overflow-x: hidden;
+    background-color: #ffffff;
+}
+
+/* NAVBAR CUSTOM STYLES */
+.certo-navbar {
+    font-size: 1.05rem;
+    padding-top: 20px !important;
+    padding-bottom: 25px !important;
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--primary-blue) !important;
+}
+
+.certo-navbar .nav-link {
+    color: var(--navy-text) !important;
+}
+
+.btn-signin {
+    background-color: var(--primary-blue);
+    border: none;
+    font-size: 0.95rem;
+    padding: 10px 28px !important;
+}
+
+/* HERO SECTION LAYOUT */
+.hero-left {
+    background-color: var(--bg-light-blue);
+    margin-top: 30px; 
+    min-height: 600px;
+}
+
+.hero-content-wrapper {
+    max-width: 620px;
+}
+
+.hero-title {
+    font-size: 4.2rem;
+    line-height: 1.05;
+    color: var(--navy-text);
+}
+
+.hero-lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+/* HERO RIGHT (Background image: div.png) */
+.hero-right {
+    background-image: url('../images/div.png') !important; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    
+    /* MODIFIED: Use start alignment to move the phone to the left side */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    position: relative;
+    
+    border-top: 12px solid var(--primary-blue);
+    border-left: 12px solid var(--primary-blue);
+    margin-top: 30px; 
+}
+
+/* Container for the mobile mockup (div1.png) */
+.mockup-container {
+    z-index: 10; 
+    position: relative;
+    /* MODIFIED: Add margin-left to push the phone away from the blue border */
+    margin-left: 50px; 
+    display: flex;
+    align-items: center;
+}
+
+/* The phone image itself (div1.png) */
+.phone-img {
+    max-height: 480px; /* Slightly smaller to fit comfortably */
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    object-fit: contain;
+    z-index: 20;
+}
+
+/* BUTTONS CUSTOMIZATION */
+.hero-buttons-flex {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-buttons-flex .btn {
+    font-size: 1.05rem;
+    border-width: 2px;
+}
+
+.btn-warning {
+    background-color: var(--primary-yellow);
+    border-color: var(--primary-yellow);
+}
+
+.btn-outline-dark {
+    border-color: var(--navy-text);
+    color: var(--navy-text);
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 991px) {
+    .hero-title { font-size: 2.8rem; }
+    .hero-content-wrapper { text-align: center; margin: 0 auto; }
+    .hero-buttons-flex { justify-content: center; }
+    .hero-right { 
+        justify-content: center; /* Center on mobile */
+        border-left: none; 
+        margin-top: 0; 
+    }
+    .mockup-container { margin-left: 0; }
+}
+/* nextpage*/
+/* TESTIMONIALS SECTION - Yellow Background */
+.testimonials-section {
+    background-color: var(--primary-yellow);
+    padding: 80px 0;
+    overflow-x: hidden;
+}
+
+.testimonial-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--navy-text);
+    margin-bottom: 50px;
+    max-width: 500px;
+}
+
+/* Flex container for the cards to allow scrolling or wrapping */
+.testimonial-row {
+    display: flex;
+    gap: 25px;
+    padding-bottom: 60px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 40px;
+    padding: 40px;
+    min-width: 350px;
+    flex: 1;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+}
+
+.stars {
+    color: #ffc247;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    color: var(--navy-text);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.testimonial-author {
+    font-weight: 800;
+    color: var(--navy-text);
+    font-size: 1rem;
+}
+
+/* LOGO BAR - Cleaned and Enlarged */
+.featured-row {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    margin-top: 50px;
+    padding: 20px 0;
+}
+
+.featured-logos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-logos img {
+    height: auto; 
+    /* Increased width to make the logos look bigger */
+    width: 95%; 
+    max-width: 1100px; /* Limits the max size so it doesn't touch screen edges */
+    opacity: 1;
+    object-fit: contain;
+    /* Optional: subtle smoothing for large images */
+    image-rendering: -webkit-optimize-contrast; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .featured-row {
+        margin-top: 30px;
+    }
+    .featured-logos img {
+        width: 100%;
+    }
+}
