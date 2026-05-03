@@ -58,7 +58,6 @@ body {
     color: var(--text-muted);
 }
 
-/* HERO RIGHT (Background image: div.png) */
 .hero-right {
     background-image: url('../images/div.png') !important; 
     background-size: cover;
@@ -69,31 +68,25 @@ body {
     align-items: center;
     justify-content: flex-start; 
     position: relative;
-    border-top: 12px solid var(--primary-blue);
+    border-top: 10px solid var(--primary-blue);
     border-left: 12px solid var(--primary-blue);
     margin-top: 30px; 
 }
 
-/* Container for mobile mockup */
 .mockup-container {
     z-index: 10; 
     position: relative;
     margin-left: 50px; 
-    display: flex;
-    align-items: center;
 }
 
-/* The phone image (image_4f8462.jpg) */
 .phone-img {
     max-height: 480px;
     object-fit: contain;
     z-index: 20;
-    /* SHADOW REMOVED */
 }
 
-/* BUTTONS CUSTOMIZATION & FIXES */
 .hero-buttons-flex {
-    display: inline-flex; /* Prevents background stretching */
+    display: inline-flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
@@ -136,7 +129,6 @@ body {
     padding: 40px;
     min-width: 350px;
     flex: 1;
-    /* SHADOW REMOVED */
 }
 
 .stars {
@@ -145,7 +137,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* LOGO BAR */
 .featured-row {
     display: flex;
     justify-content: center;
@@ -164,171 +155,65 @@ body {
     padding: 100px 0;
 }
 
+.about-heading {
+    font-size: 3.2rem; /* Larger font size as per reference image_1a6465.jpg */
+    line-height: 1.1;
+    color: var(--navy-text);
+    font-weight: 800;
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--navy-text);
+}
+
+.about-buttons-stack {
+    margin-top: 2rem;
+}
+
+/* Updated Image Frame to match solid background box */
 .about-image-frame-wrapper {
     position: relative;
-    padding-bottom: 20px;
-    padding-right: 20px;
     display: inline-block;
 }
 
 .about-woman-img {
     position: relative;
-    z-index: 10;
-    border-radius: 20px;
+    z-index: 20; /* Keep image on top */
+    border-radius: 40px; /* Matched to reference curves */
+    display: block;
 }
 
-.yellow-l-frame {
+.yellow-solid-box {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    right: 0;
-    bottom: 0;
-    border-right: 15px solid var(--primary-yellow); 
-    border-bottom: 15px solid var(--primary-yellow);
-    z-index: 5;
+    /* Pushes the box down and to the right */
+    top: 25px;
+    left: 25px;
+    right: -25px;
+    bottom: -25px;
+    
+    background-color: var(--primary-yellow);
+    z-index: 10; /* Behind the image */
+    border-radius: 40px; /* Match the woman.png curvature */
 }
 
-/* FEATURES SECTION - SIMPLIFIED FOR IMAGE ONLY */
+/* FEATURES SECTION */
 .features-section-simple {
     background-color: var(--bg-light-blue);
     border-top: 3px solid var(--primary-blue);
     padding: 100px 0;
 }
 
-.feature-img-wrapper img {
-    border-radius: 40px;
-    /* SHADOW REMOVED */
-}
-
 /* RESPONSIVENESS */
 @media (max-width: 991px) {
     .hero-title { font-size: 2.8rem; }
-    .hero-content-wrapper { text-align: center; margin: 0 auto; }
-    .hero-buttons-flex { display: flex; justify-content: center; }
-    .hero-right { 
-        justify-content: center; 
-        border-left: none; 
-        margin-top: 0; 
-    }
-    .mockup-container { margin-left: 0; }
-    .about-certo-section { text-align: center; }
-}
-/* --- CALL TO ACTION & FOOTER STYLES --- */
-
-/* Section background */
-.cta-boxes-section {
-    background-color: #ffffff;
-}
-
-/* 1. Styling the Gradient Story Box */
-.story-box {
-    background: rgb(255,194,71);
-    background: linear-gradient(135deg, rgba(255,194,71,1) 0%, rgba(255,166,47,1) 100%);
-    border-radius: 40px;
-    color: var(--navy-text);
-    transition: transform 0.3s ease;
-    border: none;
-}
-
-.story-box:hover {
-    transform: translateY(-5px);
-}
-
-/* 2. Typography for CTA Boxes */
-.box-heading {
-    font-size: 2.2rem;
-    color: var(--navy-text);
-}
-
-.box-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--navy-text);
-    font-weight: 400;
-}
-
-/* 3. Button Styles (About Us & Help Center) */
-.btn-about {
-    background-color: var(--primary-blue) !important;
-    border: none;
-    font-size: 1rem;
-    color: white !important;
-}
-
-.btn-about:hover {
-    background-color: #3242e0 !important;
-}
-
-.btn-visit-help {
-    border: 2px solid var(--navy-text) !important;
-    color: var(--navy-text) !important;
-    font-size: 1rem;
-    background: transparent;
-}
-
-.btn-visit-help:hover {
-    background-color: var(--navy-text) !important;
-    color: #ffffff !important;
-}
-
-/* 4. Blue Footer Section (Spy Check) */
-.spy-check-footer {
-    background-color: var(--primary-blue);
-    color: #ffffff;
-}
-
-.spy-check-footer h2 {
-    font-size: 2.8rem;
-    letter-spacing: -1px;
-}
-
-/* Scaling the iPhone Image Button in the footer */
-.footer-img-btn {
-    height: 60px;
-    width: auto;
-    transition: opacity 0.2s ease;
-}
-
-.footer-img-btn:hover {
-    opacity: 0.9;
-}
-
-/* Android Outline Button in Footer */
-.btn-footer-android {
-    border: 2px solid #ffffff !important;
-    color: #ffffff !important;
-    height: 60px;
-    display: inline-flex;
-    align-items: center;
-    padding-left: 2.5rem !important;
-    padding-right: 2.5rem !important;
-    font-size: 1.1rem;
-}
-
-.btn-footer-android:hover {
-    background-color: #ffffff !important;
-    color: var(--primary-blue) !important;
-}
-
-/* 5. Section-Specific Responsiveness */
-@media (max-width: 991px) {
-    .box-heading {
-        font-size: 1.8rem;
-    }
-    
-    .spy-check-footer h2 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .story-box {
-        padding: 40px 30px !important;
-        text-align: center;
-    }
-    
-    .help-content {
-        text-align: center;
-        padding-left: 0 !important;
+    .about-heading { font-size: 2.5rem; }
+    .about-buttons-stack { align-items: center; }
+    .yellow-solid-box {
+        top: 15px;
+        left: 15px;
+        right: -15px;
+        bottom: -15px;
     }
 }
