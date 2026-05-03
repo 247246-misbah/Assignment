@@ -217,3 +217,116 @@ body {
         bottom: -15px;
     }
 }
+/* INFO CARDS SECTION STYLES */
+.info-cards-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.story-card-wrapper {
+    display: flex;
+    justify-content: flex-end; /* Aligns card toward the center */
+}
+
+.rounded-card {
+    border-radius: 40px;
+    max-width: 500px; /* Adjust based on your image size */
+    width: 100%;
+}
+
+.help-center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px;
+}
+
+/* Adjusting padding for larger screens to match reference exactly */
+@media (min-width: 992px) {
+    .info-cards-section .col-md-6:first-child {
+        padding-right: 50px;
+    }
+    .info-cards-section .col-md-6:last-child {
+        padding-left: 50px;
+    }
+}
+
+/* Mobile Alignment */
+@media (max-width: 767px) {
+    .story-card-wrapper, .help-center-wrapper {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+/* CTA SECTION STYLES */
+.cta-section {
+    /* Exact purple gradient from reference image */
+    background: linear-gradient(90deg, #4353ff 0%, #2b38b3 100%);
+    padding: 100px 0;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    opacity: 0.9;
+}
+
+/* Button override for the outline button in this specific section */
+.cta-section .btn-outline-light {
+    border: 2px solid #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #4353ff;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 1.8rem;
+    }
+}
+.insights-image-section {
+    padding: 80px 0;
+}
+
+.insights-wrapper {
+    max-width: 1100px; /* Adjust this to match the width of your other sections */
+}
+
+.insights-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+/* FINAL FOOTER BACKGROUND */
+.final-footer-image-section {
+    background-color: #02033b; /* Exact dark navy from the reference */
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin: 0;
+    width: 100%;
+}
+
+/* Ensure the container doesn't have white gaps */
+.footer-pic-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    background-color: #02033b;
+}
+
+.footer-pic-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* This ensures no white line appears under the image */
+    background-color: #02033b; 
+}
