@@ -213,3 +213,122 @@ body {
     .mockup-container { margin-left: 0; }
     .about-certo-section { text-align: center; }
 }
+/* --- CALL TO ACTION & FOOTER STYLES --- */
+
+/* Section background */
+.cta-boxes-section {
+    background-color: #ffffff;
+}
+
+/* 1. Styling the Gradient Story Box */
+.story-box {
+    background: rgb(255,194,71);
+    background: linear-gradient(135deg, rgba(255,194,71,1) 0%, rgba(255,166,47,1) 100%);
+    border-radius: 40px;
+    color: var(--navy-text);
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.story-box:hover {
+    transform: translateY(-5px);
+}
+
+/* 2. Typography for CTA Boxes */
+.box-heading {
+    font-size: 2.2rem;
+    color: var(--navy-text);
+}
+
+.box-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--navy-text);
+    font-weight: 400;
+}
+
+/* 3. Button Styles (About Us & Help Center) */
+.btn-about {
+    background-color: var(--primary-blue) !important;
+    border: none;
+    font-size: 1rem;
+    color: white !important;
+}
+
+.btn-about:hover {
+    background-color: #3242e0 !important;
+}
+
+.btn-visit-help {
+    border: 2px solid var(--navy-text) !important;
+    color: var(--navy-text) !important;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.btn-visit-help:hover {
+    background-color: var(--navy-text) !important;
+    color: #ffffff !important;
+}
+
+/* 4. Blue Footer Section (Spy Check) */
+.spy-check-footer {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+}
+
+.spy-check-footer h2 {
+    font-size: 2.8rem;
+    letter-spacing: -1px;
+}
+
+/* Scaling the iPhone Image Button in the footer */
+.footer-img-btn {
+    height: 60px;
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.footer-img-btn:hover {
+    opacity: 0.9;
+}
+
+/* Android Outline Button in Footer */
+.btn-footer-android {
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+    font-size: 1.1rem;
+}
+
+.btn-footer-android:hover {
+    background-color: #ffffff !important;
+    color: var(--primary-blue) !important;
+}
+
+/* 5. Section-Specific Responsiveness */
+@media (max-width: 991px) {
+    .box-heading {
+        font-size: 1.8rem;
+    }
+    
+    .spy-check-footer h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .story-box {
+        padding: 40px 30px !important;
+        text-align: center;
+    }
+    
+    .help-content {
+        text-align: center;
+        padding-left: 0 !important;
+    }
+}
