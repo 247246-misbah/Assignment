@@ -219,3 +219,65 @@ body {
         width: 100%;
     }
 }
+/* ABOUT CERTO SECTION STYLES */
+.about-certo-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
+.about-heading {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    color: var(--navy-text);
+}
+
+.about-lead {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* Framed Image Logic */
+.about-image-frame-wrapper {
+    position: relative;
+    padding-bottom: 20px; /* Space for the bottom border offset */
+    padding-right: 20px;  /* Space for the right border offset */
+    display: inline-block;
+}
+
+.about-woman-img {
+    position: relative;
+    z-index: 10; /* Places image above the frame */
+}
+
+/* Yellow border logic: create the L-shape from image_12.png */
+.yellow-l-frame {
+    position: absolute;
+    top: 20px; /* Offset to make image hang over the top left */
+    left: 20px; /* Offset to make image hang over the top left */
+    right: 0;
+    bottom: 0;
+    
+    /* Reuses your primary yellow color variable */
+    border-right: 15px solid var(--primary-yellow); 
+    border-bottom: 15px solid var(--primary-yellow);
+    
+    z-index: 5; /* Places border behind the image */
+}
+
+/* RESPONSIVENESS: Adjusting the hanging frame for mobile stacking */
+@media (max-width: 991px) {
+    .about-certo-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .about-heading {
+        font-size: 2rem;
+    }
+    
+    .about-image-frame-wrapper {
+        margin-top: 40px;
+    }
+}
