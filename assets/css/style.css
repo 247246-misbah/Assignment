@@ -281,3 +281,75 @@ body {
         margin-top: 40px;
     }
 }
+/* FEATURES SECTION STYLES */
+.features-section {
+    background-color: var(--bg-light-blue); /* Very pale blue background from reference */
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.6rem;
+    color: var(--navy-text);
+    margin-bottom: 70px !important;
+}
+
+/* White Card Container */
+.features-card-container {
+    background: #ffffff;
+    border-radius: 40px; /* Matching the soft corners */
+    max-width: 1100px; /* Prevents card from stretching too wide */
+}
+
+/* Individual Feature Item */
+.feature-item {
+    padding: 10px;
+}
+
+.feature-name {
+    color: var(--navy-text);
+    font-size: 1.15rem;
+}
+
+.feature-text {
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* CSS SPRITE FOR ICONS: Using the single provided image (image_15.png) */
+.feature-icon {
+    width: 65px; /* Adjust size based on design */
+    height: 65px;
+    background-image: url('../images/image_15.png'); /* The composite image */
+    background-size: cover; /* Adjust this if icons are too big or too small */
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+/* Specific Positions for each icon (CSS Sprite Logic) */
+/* This requires testing and fine-tuning based on how your browser interprets the single large image. */
+.icon-spyware { background-position: 0px 0px; }            /* Top Left */
+.icon-keylogger { background-position: -65px 0px; }       /* Top Middle (Example offset) */
+.icon-tracking { background-position: -130px 0px; }       /* Top Right (Example offset) */
+
+.icon-os-check { background-position: 0px -65px; }        /* Bottom Left (Example offset) */
+.icon-removal { background-position: -65px -65px; }       /* Bottom Middle (Example offset) */
+.icon-easy { background-position: -130px -65px; }         /* Bottom Right (Example offset) */
+
+/* Add border-top color logic to match the thin blue line in the reference */
+.features-section {
+    border-top: 3px solid var(--primary-blue);
+}
+
+/* Responsive adjustments for mobile stacked features */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .features-card-container {
+        border-radius: 20px;
+        padding: 30px !important;
+    }
+    .feature-item {
+        text-align: center; /* Center text and icons on mobile */
+    }
+}
